@@ -6,3 +6,15 @@
 # 초과근무시간으로 하며,
 # 시간외수당은 초과근무시간 당 기본급의 200을 나눈 값의 초과근무시간을
 # 곱한 값으로 한다.
+emp_time = int(input("근무시간 : "))
+emp_base = int(input("기본급 : "))
+over_emp = 160 - emp_time   # 초과 근무시간
+bonus = emp_base * 0.25 # 보너스
+overtime = 0
+if over_emp>0:
+    overtime = over_emp * emp_base / 200
+tot = emp_base + bonus + overtime
+print("기본급 : ", emp_base)
+print("상여금 : ", bonus)
+print("시간외수당 : ", overtime)
+print("총급여 : ", tot)
